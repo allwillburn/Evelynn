@@ -132,7 +132,7 @@ OnTick(function (myHero)
             end
 
             if EvelynnMenu.Combo.E:Value() and Ready(_E) and ValidTarget(target, 500) then
-			 CastSpell(_E)
+			 CastTargetSpell(target, _E)
 	    end
 
             if EvelynnMenu.Combo.Q:Value() and Ready(_Q) and ValidTarget(target, 500) then
@@ -195,7 +195,7 @@ OnTick(function (myHero)
                 end 
 
                 if IsReady(_E) and ValidTarget(enemy, 187) and EvelynnMenu.KillSteal.E:Value() and GetHP(enemy) < getdmg("E",enemy) then
-		                      CastSpell(_E)
+		                      CastTargetSpell(target, _E)
   
                 end
       end
@@ -211,7 +211,7 @@ OnTick(function (myHero)
 	        end
 
                 if EvelynnMenu.LaneClear.E:Value() and Ready(_E) and ValidTarget(closeminion, 187) then
-	        	CastSpell(_E)
+	        	CastTargetSpell(closeminion, _E)
 	        end
 
                 if EvelynnMenu.LaneClear.Tiamat:Value() and ValidTarget(closeminion, 350) then
@@ -236,7 +236,7 @@ OnTick(function (myHero)
         end
         if EvelynnMenu.AutoMode.E:Value() then        
 	  if Ready(_E)  then
-		      CastSpell(_E)
+		      CastTargetSpell(target, _E)
 	  end
         end
         if EvelynnMenu.AutoMode.R:Value() then        
